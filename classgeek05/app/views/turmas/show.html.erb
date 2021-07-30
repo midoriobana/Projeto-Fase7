@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+    
+    
+<div class="row">
+<div class="col-4">
+    <div class="card" style="width: 15rem;">
+        <%= image_tag @turma.image, :class => "gravatar", class:"card-img-top rounded", style:"width: 13rem; margin:1rem;" %>
+    <div class="card-body">
+        <h5 class="card-title"> </h5>
+        <p class="card-text"> </p>
+        <a href="#" class="btn btn-primary">Ver Perfil</a>
+    </div>
+    </div>  
+</div>  
+
+<div class="col-8">
+    <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">    
+    <center> </center>
+    
+   
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <p class="card-text"> </p>
+        
+    
+ 
+    </ul>
+    </div>
+    </div>
+</div>      
+</div>
+
+
+
+
+
+
+
+
+<p>
+  <strong>Nome:</strong>
+  <%= @turma.nome %>
+</p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @turma.inicio %>
+</p>
+
+<p>
+  <strong>Fim:</strong>
+  <%= @turma.fim %>
+</p>
+
+<p>
+  <strong>Horas:</strong>
+  <%= @turma.horas %>
+</p>
+
+<%= link_to 'Edit', edit_turma_path(@turma) %> |
+<%= link_to 'Back', turmas_path %>

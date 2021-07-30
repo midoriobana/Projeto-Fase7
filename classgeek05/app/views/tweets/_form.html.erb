@@ -1,0 +1,23 @@
+<%= form_with(model: tweet, multipart: true) do |form| %>
+  <% if tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tweet.errors.count, "error") %> foi encontrado. Ops, algo deu errado. Tente novamente mais tarde   </h2>
+
+      <ul>
+        <% tweet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="container">
+  <div class="input-group mb-3">
+    <%= form.text_area :conteudo, class: "form-control" %>
+  </div>
+  <div class="input-group mb-3">
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+</div>
+    <%= form.submit "Enviar", class: "btn btn-primary"%>
+
+<% end %>

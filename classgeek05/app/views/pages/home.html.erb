@@ -1,0 +1,17 @@
+<div class="jumbotron mx-5 mt-5">
+    <% if user_signed_in? %>
+    <h1 class="display-4">Bem-vindo ao ClassGeek!</h1>
+    <p class="lead">Um lugar divertido com gente incrível!</p>
+    <hr class="my-4">
+    <p>Você está logado! </p>
+    
+    <% else %>
+    <h1 class="display-4">Bem-vindo ao ClassGeek!</h1>
+    <p class="lead">Um lugar divertido com gente incrível!</p>
+    <hr class="my-4">
+    <p>Faça amigos, divirta-se e seja famoso! </p>
+    <p class="lead">
+      <%= link_to "Cadastre-se agora", new_user_registration_path, class: "btn btn-primary btn-lg"%>
+    </p>
+    <% end %>
+</div>  
